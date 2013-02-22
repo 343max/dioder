@@ -1,27 +1,23 @@
-const int LED = 13;
+const int Led1RedPin = 3;
+const int Led1BluePin = 5;
+const int Led1GreenPin = 6;
 
-const int LED1red = 3;
-const int LED1blue = 5;
-const int LED1green = 6;
+const int Led2RedPin = 9;
+const int Led2BluePin = 10;
+const int Led2GreenPin = 11;
 
-const int LED2red = 9;
-const int LED2blue = 10;
-const int LED2green = 11;
-
-const int pins[7] = {LED, LED2red, LED1red, LED2green, LED1green, LED2blue, LED1blue};
+const int pins[6] = {Led1RedPin, Led1GreenPin, Led1BluePin, Led2RedPin, Led2GreenPin, Led2BluePin};
 
 bool autoMode = true;
 
 float value = 0;
 
-int red = 0;
-int blue = 0;
-int green = 0;
+int color[6];
 
 void setup() {
     Serial.begin(9600);
-    Serial.println("Hello!");
-	for (int i = 0; i < 7; ++i)
+    Serial.println("go!");
+	for (int i = 0; i < 6; ++i)
 	{
 		pinMode(pins[i], OUTPUT);
 	}
@@ -35,26 +31,20 @@ void loop() {
 	if (autoMode)
 	{
 		value += 0.04;
-		red = sinToPin(value);
-		green = sinToPin(value + 1.5);
-		blue = sinToPin(value + 3.0);
+		color[0] = sinToPin(value);
+		color[1] = sinToPin(value + 1.5);
+		color[2] = sinToPin(value + 3.0);
+
+		color[3] = color[1];
+		color[4] = color[2];
+		color[5] = color[0];
 	}
 
+	for (int i = 0; i < 6; ++i)
+	{
+		analogWrite(pins[i], color[i]);
+	}
 
-	Serial.println(red);
-
-	analogWrite(LED, red);
-	analogWrite(LED1red, red);
-	analogWrite(LED2red, green);
-	analogWrite(LED1green, green);
-	analogWrite(LED2green, blue);
-	analogWrite(LED1blue, blue);
-	analogWrite(LED2blue, red);
-	// for (int i = 0; i < 7; ++i)
-	// {
-	// 	int pin = pins[i];
-	// 	analogWrite(pin, value);
-	// }
 	delay(20);
 }
 
@@ -62,9 +52,13 @@ void serialEvent() {
 	if (Serial.available())
 	{
 		autoMode = false;
-		red = Serial.read();
-		green = Serial.read();
-		blue = Serial.read();
+		int dioderIndex = Serial.read();
+
+		color[dioderIndex * 3 + 0] = Serial.read();
+		color[dioderIndex * 3 + 1] = Serial.read();
+		color[dioderIndex * 3 + 2] = Serial.read();
+
+		Serial.println("ok");
 	}
 	
 }
