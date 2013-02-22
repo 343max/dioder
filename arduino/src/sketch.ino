@@ -10,6 +10,8 @@ const int LED2green = 11;
 
 const int pins[7] = {LED, LED2red, LED1red, LED2green, LED1green, LED2blue, LED1blue};
 
+bool autoMode = true;
+
 float value = 0;
 
 int red = 0;
@@ -30,10 +32,13 @@ int sinToPin(float value) {
 }
 
 void loop() {
-	value += 0.04;
-	red = sinToPin(value);
-	green = sinToPin(value + 1.5);
-	blue = sinToPin(value + 3.0);
+	if (autoMode)
+	{
+		value += 0.04;
+		red = sinToPin(value);
+		green = sinToPin(value + 1.5);
+		blue = sinToPin(value + 3.0);
+	}
 
 
 	Serial.println(red);
@@ -56,9 +61,10 @@ void loop() {
 void serialEvent() {
 	if (Serial.available())
 	{
-		int value = Serial.read();
-		Serial.println("Yes!?");
-		Serial.println(value);
+		autoMode = false;
+		red = Serial.read();
+		green = Serial.read();
+		blue = Serial.read();
 	}
 	
 }
