@@ -18,6 +18,7 @@ int green = 0;
 
 void setup() {
     Serial.begin(9600);
+    Serial.println("Hello!");
 	for (int i = 0; i < 7; ++i)
 	{
 		pinMode(pins[i], OUTPUT);
@@ -50,4 +51,14 @@ void loop() {
 	// 	analogWrite(pin, value);
 	// }
 	delay(20);
+}
+
+void serialEvent() {
+	if (Serial.available())
+	{
+		int value = Serial.read();
+		Serial.println("Yes!?");
+		Serial.println(value);
+	}
+	
 }
