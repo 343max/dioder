@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ORSSerialPortManager.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ORSSerialPortManager</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPortManager.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ORSSerialPortManager/sharedSerialPortManager</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPortManager.h</DeclaredIn>			
+			
+			<Declaration>+ (ORSSerialPortManager *)sharedSerialPortManager</Declaration>
+			
+			
+			<Anchor>//api/name/sharedSerialPortManager</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPortManager/setAvailablePorts:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPortManager.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSArray *availablePorts</Declaration>
+			
+			
+			<Anchor>//api/name/availablePorts</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPortManager/availablePorts</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPortManager.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSArray *availablePorts</Declaration>
+			
+			
+			<Anchor>//api/name/availablePorts</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

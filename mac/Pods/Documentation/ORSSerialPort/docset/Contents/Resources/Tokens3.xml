@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/ORSSerialPortDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/ORSSerialPortDelegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ORSSerialPortDelegate/serialPort:didReceiveData:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (void)serialPort:(ORSSerialPort *)serialPort didReceiveData:(NSData *)data</Declaration>
+			
+			
+			<Anchor>//api/name/serialPort:didReceiveData:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ORSSerialPortDelegate/serialPortWasRemovedFromSystem:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (void)serialPortWasRemovedFromSystem:(ORSSerialPort *)serialPort</Declaration>
+			
+			
+			<Anchor>//api/name/serialPortWasRemovedFromSystem:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ORSSerialPortDelegate/serialPort:didEncounterError:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (void)serialPort:(ORSSerialPort *)serialPort didEncounterError:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/serialPort:didEncounterError:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ORSSerialPortDelegate/serialPortWasOpened:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (void)serialPortWasOpened:(ORSSerialPort *)serialPort</Declaration>
+			
+			
+			<Anchor>//api/name/serialPortWasOpened:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/ORSSerialPortDelegate/serialPortWasClosed:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (void)serialPortWasClosed:(ORSSerialPort *)serialPort</Declaration>
+			
+			
+			<Anchor>//api/name/serialPortWasClosed:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

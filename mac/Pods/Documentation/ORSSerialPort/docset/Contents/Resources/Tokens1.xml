@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ORSSerialPort.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ORSSerialPort</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ORSSerialPort/serialPortWithPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>+ (ORSSerialPort *)serialPortWithPath:(NSString *)devicePath</Declaration>
+			
+			
+			<Anchor>//api/name/serialPortWithPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ORSSerialPort/serialPortWithDevice:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>+ (ORSSerialPort *)serialPortWithDevice:(io_object_t)device</Declaration>
+			
+			
+			<Anchor>//api/name/serialPortWithDevice:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/initWithPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithPath:(NSString *)devicePath</Declaration>
+			
+			
+			<Anchor>//api/name/initWithPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/initWithDevice:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDevice:(io_object_t)device</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDevice:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/open</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (void)open</Declaration>
+			
+			
+			<Anchor>//api/name/open</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/close</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)close</Declaration>
+			
+			
+			<Anchor>//api/name/close</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/cleanup</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (void)cleanup</Declaration>
+			
+			
+			<Anchor>//api/name/cleanup</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/sendData:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)sendData:(NSData *)data</Declaration>
+			
+			
+			<Anchor>//api/name/sendData:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setDelegate:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, unsafe_unretained) id&lt;ORSSerialPortDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/delegate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, unsafe_unretained) id&lt;ORSSerialPortDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setOpen:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, getter=isOpen) BOOL open</Declaration>
+			
+			
+			<Anchor>//api/name/open</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/open</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, getter=isOpen) BOOL open</Declaration>
+			
+			
+			<Anchor>//api/name/open</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setPath:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, readonly) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/path</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, readonly) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setName:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/name</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setBaudRate:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *baudRate</Declaration>
+			
+			
+			<Anchor>//api/name/baudRate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/baudRate</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSNumber *baudRate</Declaration>
+			
+			
+			<Anchor>//api/name/baudRate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setNumberOfStopBits:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) NSUInteger numberOfStopBits</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfStopBits</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/numberOfStopBits</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) NSUInteger numberOfStopBits</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfStopBits</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setShouldEchoReceivedData:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL shouldEchoReceivedData</Declaration>
+			
+			
+			<Anchor>//api/name/shouldEchoReceivedData</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/shouldEchoReceivedData</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL shouldEchoReceivedData</Declaration>
+			
+			
+			<Anchor>//api/name/shouldEchoReceivedData</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setParity:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) ORSSerialPortParity parity</Declaration>
+			
+			
+			<Anchor>//api/name/parity</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/parity</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) ORSSerialPortParity parity</Declaration>
+			
+			
+			<Anchor>//api/name/parity</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setUsesRTSCTSFlowControl:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL usesRTSCTSFlowControl</Declaration>
+			
+			
+			<Anchor>//api/name/usesRTSCTSFlowControl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/usesRTSCTSFlowControl</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL usesRTSCTSFlowControl</Declaration>
+			
+			
+			<Anchor>//api/name/usesRTSCTSFlowControl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setUsesDTRDSRFlowControl:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL usesDTRDSRFlowControl</Declaration>
+			
+			
+			<Anchor>//api/name/usesDTRDSRFlowControl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/usesDTRDSRFlowControl</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL usesDTRDSRFlowControl</Declaration>
+			
+			
+			<Anchor>//api/name/usesDTRDSRFlowControl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setUsesDCDOutputFlowControl:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL usesDCDOutputFlowControl</Declaration>
+			
+			
+			<Anchor>//api/name/usesDCDOutputFlowControl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/usesDCDOutputFlowControl</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL usesDCDOutputFlowControl</Declaration>
+			
+			
+			<Anchor>//api/name/usesDCDOutputFlowControl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setRTS:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL RTS</Declaration>
+			
+			
+			<Anchor>//api/name/RTS</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/RTS</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL RTS</Declaration>
+			
+			
+			<Anchor>//api/name/RTS</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setDTR:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL DTR</Declaration>
+			
+			
+			<Anchor>//api/name/DTR</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/DTR</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) BOOL DTR</Declaration>
+			
+			
+			<Anchor>//api/name/DTR</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setCTS:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL CTS</Declaration>
+			
+			
+			<Anchor>//api/name/CTS</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/CTS</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL CTS</Declaration>
+			
+			
+			<Anchor>//api/name/CTS</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setDSR:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL DSR</Declaration>
+			
+			
+			<Anchor>//api/name/DSR</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/DSR</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL DSR</Declaration>
+			
+			
+			<Anchor>//api/name/DSR</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ORSSerialPort/setDCD:</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL DCD</Declaration>
+			
+			
+			<Anchor>//api/name/DCD</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ORSSerialPort/DCD</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>ORSSerialPort.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) BOOL DCD</Declaration>
+			
+			
+			<Anchor>//api/name/DCD</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
