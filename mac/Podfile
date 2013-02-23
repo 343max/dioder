@@ -3,3 +3,4 @@ xcodeproj 'DioderMac.xcodeproj'
 platform :osx
 
 pod 'ORSSerialPort'
+pod 'ProtobufObjC'

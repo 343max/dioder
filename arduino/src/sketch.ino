@@ -8,14 +8,12 @@ const int Led2GreenPin = 11;
 
 const int pins[6] = {Led1RedPin, Led1GreenPin, Led1BluePin, Led2RedPin, Led2GreenPin, Led2BluePin};
 
-bool autoMode = true;
+volatile bool autoMode = true;
 
-float value = 0;
-
-int color[6];
+volatile int color[6];
 
 void setup() {
-    Serial.begin(9600);
+    Serial.begin(57600);
     Serial.println("go!");
 	for (int i = 0; i < 6; ++i)
 	{
@@ -30,7 +28,7 @@ int sinToPin(float value) {
 void loop() {
 	if (autoMode)
 	{
-		value += 0.04;
+		float value = millis() / 500.0;
 		color[0] = sinToPin(value);
 		color[1] = sinToPin(value + 1.5);
 		color[2] = sinToPin(value + 3.0);
@@ -45,14 +43,15 @@ void loop() {
 		analogWrite(pins[i], color[i]);
 	}
 
-	delay(20);
+	// delay(20);
 }
 
 void serialEvent() {
-	if (Serial.available())
+	if (Serial.available() >= 4)
 	{
 		autoMode = false;
 		int dioderIndex = Serial.read();
+		dioderIndex = (dioderIndex == 0 ? 0 : 1);
 
 		color[dioderIndex * 3 + 0] = Serial.read();
 		color[dioderIndex * 3 + 1] = Serial.read();

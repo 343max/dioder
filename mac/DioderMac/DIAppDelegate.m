@@ -12,6 +12,7 @@
 
 @property (strong) ORSSerialPort *serialPort;
 @property (strong) NSTimer *sendColorTimer;
+@property (assign) BOOL firstContact;
 
 - (void)setColor:(NSColor *)color ofDioder:(NSUInteger)dioderIndex;
 - (void)sendColors;
@@ -28,11 +29,11 @@
     self.serialPort.delegate = self;
     [self.serialPort open];
     
-    self.sendColorTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                           target:self
-                                                         selector:@selector(sendColors)
-                                                         userInfo:nil
-                                                          repeats:YES];
+//    self.sendColorTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+//                                                           target:self
+//                                                         selector:@selector(sendColors)
+//                                                         userInfo:nil
+//                                                          repeats:YES];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification;
@@ -44,9 +45,13 @@
 {
     char bytes[4];
     bytes[0] = (char)dioderIndex;
-    bytes[1] = (char)(color.redComponent * 255.0);
-    bytes[2] = (char)(color.greenComponent * 255.0);
-    bytes[3] = (char)(color.blueComponent * 255.0);
+    
+    CGFloat red, green, blue, alpha;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    bytes[1] = (char)(red * 255.0);
+    bytes[2] = (char)(green * 255.0);
+    bytes[3] = (char)(blue * 255.0);
     NSLog(@"color: %f, %f, %f", color.redComponent, color.greenComponent, color.blueComponent);
     NSData *data = [[NSData alloc] initWithBytes:&bytes length:sizeof(bytes)];
     
@@ -70,19 +75,19 @@
 - (void)serialPortWasOpened:(ORSSerialPort *)serialPort;
 {
     NSLog(@"serialPortWasOpened: %@", serialPort);
-    
-    double delayInSeconds = 0.3;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [self setColor:self.dioder0Color.color ofDioder:0];
-        [self setColor:self.dioder1Color.color ofDioder:1];
-    });
+    self.firstContact = YES;
 }
 
 - (void)serialPort:(ORSSerialPort *)serialPort didReceiveData:(NSData *)data;
 {
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     NSLog(@"d: %@", stringData);
+    if (self.firstContact) {
+        [self setColor:self.dioder0Color.color ofDioder:0];
+        [self setColor:self.dioder1Color.color ofDioder:1];
+
+        self.firstContact = NO;
+    }
 }
 
 - (void)serialPortWasRemovedFromSystem:(ORSSerialPort *)serialPort;
