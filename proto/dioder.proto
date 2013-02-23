@@ -1,6 +1,0 @@
-
-message Color {
-	required uint32 red = 1;
-	required uint32 green = 2;
-	required uint32 blue = 3;
-}
